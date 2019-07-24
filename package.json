@@ -1,6 +1,6 @@
 {
 	"name": "otelo-ui",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Unique UI component for ReactJS",
 	"main": "index.js",
 	"scripts": {

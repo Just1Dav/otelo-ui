@@ -1,11 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 
-export default class FirstComponent extends Component {
-	render() {
-		return (
-			<div>
-				<p>Meu primeiro componente!</p>
-			</div>
-		);
-	}
-}
+// import { Container } from './styles';
+
+const FirstComponent = props => <input {...props} />;
+
+export default FirstComponent;
