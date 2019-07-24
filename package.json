@@ -1,11 +1,14 @@
 {
 	"name": "otelo-ui",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"description": "Unique UI component for ReactJS",
-	"main": "index.js",
+	"main": "dist/index.js",
+	"module": "dist/index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"build": "./node_modules/.bin/babel src --out-dir ./dist -s inline"
+		"build": "./node_modules/.bin/babel src --out-dir ./dist -s inline",
+		"release": "standard-version",
+		"deploy": "yarn build && yarn release && npm publish"
 	},
 	"repository": {
 		"type": "git",
@@ -29,5 +32,8 @@
 		"@babel/preset-react": "^7.0.0",
 		"react": "^16.8.6",
 		"react-dom": "^16.8.6"
+	},
+	"dependencies": {
+		"standard-version": "^6.0.1"
 	}
 }
