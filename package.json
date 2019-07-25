@@ -7,6 +7,7 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"build": "./node_modules/.bin/babel src --out-dir ./dist -s inline",
+		"watch": "rm -rf dist && babel src -d dist --watch --copy-files --verbose",
 		"release": "standard-version",
 		"deploy": "yarn build && yarn release && npm publish"
 	},
