@@ -1,5 +1,6 @@
 import React from "react";
+import { InputUi } from "./styles";
 
-const FirstComponent = props => <input {...props} />;
+const InputField = props => <InputUi {...props} />;
 
-export default FirstComponent;
+export default InputField;

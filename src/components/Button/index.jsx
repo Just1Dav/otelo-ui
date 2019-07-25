@@ -1,5 +1,6 @@
 import React from "react";
+import { ButtonUi } from "./styles";
 
-const Button = props => <button {...props}>{props.children} dawdawdawdad</button>;
+const Button = props => <ButtonUi {...props}>{props.children}</ButtonUi>;
 
 export default Button;
