@@ -9,7 +9,6 @@ const FontSizeMixin = css`
 `;
 
 const TextUi = styled.span`
-	font-family: "Source Sans Pro", sans-serif;
 	font-weight: 600;
 	${props => props.textColor && TextColorMixin};
 	${props => props.fontSize && FontSizeMixin};

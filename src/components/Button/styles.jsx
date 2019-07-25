@@ -17,7 +17,7 @@ const ButtonUi = styled.button`
 	margin: 20px 16px;
 	padding: 8px 65px;
 	box-shadow: -1px 2px 4px 0px rgba(0, 0, 0, 0.35);
-
+	font-weight: 500;
 	${props => props.bgColor && BackgroundMixin};
 	${props => props.textColor && TextColorMixin};
 	${props => props.rounded && RadiusMixin};
