@@ -4,14 +4,23 @@ const RadiusMixin = css`
 	border-radius: ${props => (props.rounded ? "25px" : "none")};
 `;
 
+const HeightMixin = css`
+	height: ${props => props.height && `${props.height}px`};
+`;
+
+const FontWeightMixin = css`
+	font-weight: ${props => (props.fontWeight ? props.fontWeight : 500)};
+`;
+
 const InputUi = styled.input`
-	width: 35%;
-	height: 40px;
+	width: 100%;
 	background-color: #fff;
+	font-family: "Quicksand", sans-serif;
 	border: none;
-	margin: 20px 15px;
 	padding: 10px 20px;
+	${props => props.fontWeight && FontWeightMixin}
 	${props => props.rounded && RadiusMixin};
+	${props => props.height && HeightMixin}
 	&:focus {
 		outline: unset;
 	}

@@ -1,10 +1,6 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { TextUi } from "./styles";
 
-const Text = props => (
-	<Fragment>
-		<TextUi {...props}>{props.children}</TextUi>
-	</Fragment>
-);
+const Text = props => <TextUi {...props}>{props.children}</TextUi>;
 
 export default Text;

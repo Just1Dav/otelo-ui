@@ -12,12 +12,18 @@ const RadiusMixin = css`
 	border-radius: ${props => (props.rounded ? "25px" : "none")};
 `;
 
+const FontWeightMixin = css`
+	font-weight: ${props => (props.fontWeight ? props.fontWeight : 500)};
+`;
+
 const ButtonUi = styled.button`
 	border: none;
-	margin: 20px 16px;
+	height: 40px;
+	font-family: "Quicksand", sans-serif;
 	padding: 8px 65px;
 	box-shadow: -1px 2px 4px 0px rgba(0, 0, 0, 0.35);
-	font-weight: 500;
+	transition: box-shadow 0.2s ease-in-out;
+	${props => props.fontWeight && FontWeightMixin}
 	${props => props.bgColor && BackgroundMixin};
 	${props => props.textColor && TextColorMixin};
 	${props => props.rounded && RadiusMixin};
@@ -29,6 +35,7 @@ const ButtonUi = styled.button`
 	}
 	&:active {
 		box-shadow: -1px 2px 12px 1px rgba(0, 0, 0, 0.35);
+		transition: box-shadow 0.2s ease-in-out;
 	}
 `;
 
