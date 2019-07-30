@@ -7,5 +7,7 @@ import Text from "./components/Text";
 import Image from "./components/Image";
 import Card from "./components/Card";
 import Marquee from "./components/Marquee";
+import Form from "./components/Form";
+import LoadingCircle from "./components/LoadingCircle";
 
-export { Row, Column, Navbar, Button, InputField, Text, Image, Card, Marquee };
+export { Row, Column, Navbar, Button, InputField, Text, Image, Card, Marquee, Form, LoadingCircle };
