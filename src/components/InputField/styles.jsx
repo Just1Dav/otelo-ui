@@ -1,4 +1,6 @@
 import styled, { css } from "styled-components";
+import propTypes from "prop-types";
+
 
 const RadiusMixin = css`
 	border-radius: ${props => (props.rounded ? "25px" : "none")};

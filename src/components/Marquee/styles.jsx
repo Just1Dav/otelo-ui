@@ -1,4 +1,6 @@
 import styled, { css, keyframes } from "styled-components";
+import propTypes from "prop-types";
+
 
 const BackgroundMixin = css`
 	background-color: ${props => props.bgColor};

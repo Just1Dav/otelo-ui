@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import propTypes from "prop-types";
 
 const BackgroundMixin = css`
 	background-color: ${props => props.bgColor};
