@@ -5,8 +5,8 @@ const BackgroundMixin = css`
 `;
 
 const marquee = keyframes`
-from  { text-indent:  100% }
-to    { text-indent: -100% }
+from  { text-indent:  250% }
+to    { text-indent: -250% }
 `;
 
 const MarqueeUi = styled.div`
@@ -15,7 +15,7 @@ const MarqueeUi = styled.div`
 	overflow: hidden;
 	white-space: nowrap;
 	box-sizing: border-box;
-	animation: ${marquee} 30s linear infinite;
+	animation: ${marquee} 35s linear infinite;
 	${props => props.bgColor && BackgroundMixin};
 	& span {
 		padding-left: 100px;
