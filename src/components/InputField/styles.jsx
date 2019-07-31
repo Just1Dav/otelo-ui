@@ -26,4 +26,16 @@ const InputUi = styled.input`
 	}
 `;
 
+InputUi.propTypes = {
+	fontWeight: propTypes.number,
+	height: propTypes.number,
+	rounded: propTypes.bool,
+};
+
+InputUi.defaultProps = {
+	fontWeight: 600,
+	height: 40,
+	rounded: true,
+};
+
 export { InputUi as default, InputUi };

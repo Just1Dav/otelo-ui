@@ -26,4 +26,12 @@ const MarqueeUi = styled.div`
 	}
 `;
 
+InputUi.propTypes = {
+	bgColor: propTypes.string,
+};
+
+InputUi.defaultProps = {
+	bgColor: "#FFF",
+};
+
 export { MarqueeUi as default, MarqueeUi };

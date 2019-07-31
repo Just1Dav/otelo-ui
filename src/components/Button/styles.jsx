@@ -39,4 +39,18 @@ const ButtonUi = styled.button`
 	}
 `;
 
+ButtonUi.propTypes = {
+	fontWeight: propTypes.number,
+	bgColor: propTypes.string,
+	textColor: propTypes.string,
+	rounded: propTypes.bool,
+};
+
+ButtonUi.defaultProps = {
+	fontWeight: 600,
+	bgColor: "#FFF",
+	textColor: "#000",
+	rounded: true,
+};
+
 export { ButtonUi as default, ButtonUi };
