@@ -1,39 +1,45 @@
 import styled, { css, keyframes } from "styled-components";
 import propTypes from "prop-types";
 
-
 const BackgroundMixin = css`
 	background-color: ${props => props.bgColor};
 `;
 
 const marquee = keyframes`
-from  { text-indent:  250% }
-to    { text-indent: -250% }
+ 0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
 `;
 
 const MarqueeUi = styled.div`
 	width: 100%;
 	margin: 0 auto;
-	overflow: hidden;
 	white-space: nowrap;
+	overflow: hidden;
 	box-sizing: border-box;
-	animation: ${marquee} 35s linear infinite;
 	${props => props.bgColor && BackgroundMixin};
 	& span {
-		padding-left: 100px;
+		display: inline-block;
+		margin-left: 35px;
+		animation: ${marquee} ${props => props.itemAmount * 1.3}s linear infinite;
 	}
-	&:hover {
+	& span:hover {
 		cursor: pointer;
 		animation-play-state: paused;
 	}
 `;
 
-InputUi.propTypes = {
+MarqueeUi.propTypes = {
 	bgColor: propTypes.string,
+	itemAmount: propTypes.number,
 };
 
-InputUi.defaultProps = {
+MarqueeUi.defaultProps = {
 	bgColor: "#FFF",
+	itemAmount: 1,
 };
 
 export { MarqueeUi as default, MarqueeUi };
